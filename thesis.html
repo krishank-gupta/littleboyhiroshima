@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Thesis | Krishank Gupta</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+		<link rel="icon" href="logo.png">		
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <h1><center>Hiroshima</center></h1>
+                <p><center>The Triumphic Tragedy</center></p>
+            </div>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="thesis.html">Thesis</a>
+                <a href="secondworldwar.html">Second World War</a>
+                <a href="triumph.html">Triumph</a>
+                <a href="tragedy.html">Tragedy</a>
+                <a href="research.html" class="right">Research</a>
+            </div>
+            <br>
+            <div class="maincontent">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="IMG1.png" style="width:100%">
+                        <div class="text">An aerial view of Hiroshima, one month after the bombing.</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="IMG2.png" style="width:100%">
+                        <div class="text">Hiroshima castle, which dated back to the 16<sup>th</sup> century.</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="IMG3.png" style="width:100%">
+                        <div class="text">A few stell and concrete buildings and bridges stand intact in Hiroshima, as seen on Sept 5 1945.</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {slideIndex = 1}    
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                    }
+                </script>
+                <br>
+                <hr>
+                <div class="thesisstatement">
+					<br>
+					<h1 class="thesisstatement2"><center>Thesis Statement:</center></h1>
+                    <h2 class="thesisstatement2">It was a tragedy that Little Boy killed a lot of people and did unnecessary damage, however, the nuclear age has been a triumph.</h2>
+					<br>
+                </div>
+				<hr>
+				<br>
+				<img src="eplosion%20IMG.png" alt="Might include a explosion" class="explosion">
+				<p>The mushroom shaped cloud as seen over Hiroshima on the day of the bombing.</p>
+				<br>
+				<hr>
+				<br>
+            </div>
+            <div class=navbar>
+                <a href="index.html">Previous</a>
+                <a href="secondworldwar.html" class="right">Next</a>
+            </div>    
+            <div class="footer">
+                <h1><center>Hiroshima</center></h1>
+                <p><center>The Triumphic Tragedy</center></p>
+				<hr>
+				<p><center>Krishank Gupta</center></p>				
+            </div>
+        </div>
+    </body>
+</html>
